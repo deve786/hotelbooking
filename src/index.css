@@ -1,13 +1,179 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
 }
+.animated-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 36px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 16px;
+    background-color: inherit;
+    border-radius: 100px;
+    font-weight: 600;
+    color: rgb(61, 60, 56);
+    box-shadow: 0 0 0 2px rgb(132, 139, 90);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button svg {
+    position: absolute;
+    width: 24px;
+    fill: 0 0 0 2px rgb(132, 139, 90);;
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .arr-1 {
+    right: 16px;
+  }
+  
+  .animated-button .arr-2 {
+    left: -25%;
+  }
+  
+  .animated-button .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: 0 0 0 2px rgb(155, 174, 51);;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: #212121;
+    border-radius: 12px;
+  }
+  
+  .animated-button:hover .arr-1 {
+    right: -25%;
+  }
+  
+  .animated-button:hover .arr-2 {
+    left: 16px;
+  }
+  
+  .animated-button:hover .text {
+    transform: translateX(12px);
+  }
+  
+  .animated-button:hover svg {
+    fill: #212121;
+  }
+  
+  .animated-button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px 0 0 0 2px rgb(132, 139, 90);;
+  }
+  
+  .animated-button:hover .circle {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+  }
+  
+
+  
+  /* Scrollbar Track */
+::-webkit-scrollbar-track {
+    background-color: #73787b; /* Change the background color of the track */
+  }
+  
+  /* Scrollbar Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: #73787b; /* Change the color of the scrollbar handle */
+    border-radius: 10px; /* Adjust the border radius of the scrollbar handle */
+  }
+  
+  /* Scrollbar Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #73787b; /* Change the color of the scrollbar handle on hover */
+  }
+  
+  /* Scrollbar Track when scrollbar is in active state (clicked or being dragged) */
+  ::-webkit-scrollbar-thumb:active {
+    background-color: #73787b; /* Change the color of the scrollbar handle when active */
+  }
+  
+  /* Scrollbar corner */
+  ::-webkit-scrollbar-corner {
+    background-color: #73787b ; /* Change the background color of the scrollbar corner */
+  }
+  
+  /* Scrollbar Track when scrollbar is in horizontal direction */
+  ::-webkit-scrollbar-track-horizontal {
+    background-color: #73787b; /* Change the background color of the horizontal track */
+  }
+  
+  /* Scrollbar Handle when scrollbar is in horizontal direction */
+  ::-webkit-scrollbar-thumb-horizontal {
+    background-color: #73787b; /* Change the color of the horizontal scrollbar handle */
+  }
+  
+  /* Scrollbar Handle on hover when scrollbar is in horizontal direction */
+  ::-webkit-scrollbar-thumb-horizontal:hover {
+    background-color: #73787b; /* Change the color of the horizontal scrollbar handle on hover */
+  }
+  
+  /* Scrollbar Track when scrollbar is in vertical direction */
+  ::-webkit-scrollbar-track-vertical {
+    background-color: #73787b; /* Change the background color of the vertical track */
+  }
+  
+  /* Scrollbar Handle when scrollbar is in vertical direction */
+  ::-webkit-scrollbar-thumb-vertical {
+    background-color: #73787b; /* Change the color of the vertical scrollbar handle */
+  }
+  
+  /* Scrollbar Handle on hover when scrollbar is in vertical direction */
+  ::-webkit-scrollbar-thumb-vertical:hover {
+    background-color: #73787b; /* Change the color of the vertical scrollbar handle on hover */
+  }
+
+
+  /* styles.css */
+
+/* Width of the scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: none;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #73787b;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #636667;
+  }
+  
