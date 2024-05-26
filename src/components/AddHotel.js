@@ -86,7 +86,7 @@ const AddHotel = () => {
         <div className="container mx-auto p-6 mt-10">
             <div className="flex justify-between items-center mb-6">
                 <h2 className="text-3xl font-semibold text-gray-800">Hotels</h2>
-                <div>
+                <div className='flex flex-col md:flex-row'>
                     <button
                         onClick={() => {
                             setHotelToEdit(null);
@@ -132,7 +132,7 @@ const AddHotel = () => {
                                     <p className="text-gray-700 mt-1">Price: ${hotel.price}</p>
                                     <p className="text-gray-700 mt-1">Room Size: {hotel.roomSize}</p>
                                 </div>
-                                <div className="flex space-x-2">
+                                <div className="flex-col flex  md:flex-row gap-2">
                                     <button
                                         onClick={() => handleEditHotel(hotel)}
                                         className="px-3 py-1 bg-yellow-400 text-white rounded-lg hover:bg-yellow-500 transform hover:scale-105 transition-all duration-300"
