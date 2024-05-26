@@ -3,7 +3,7 @@ import { useLocation, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWifi, faUtensils, faSwimmingPool, faParking, faDumbbell } from '@fortawesome/free-solid-svg-icons';
-
+import { Bounce, toast } from 'react-toastify';
 const HotelDetails = () => {
   const { id } = useParams();
   const [hotel, setHotel] = useState(null);
