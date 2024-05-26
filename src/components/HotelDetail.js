@@ -13,7 +13,7 @@ const HotelDetails = () => {
   useEffect(() => {
     const fetchHotel = async () => {
       try {
-        const response = await axios.get(`https://hotelback-haac.onrender.com/${id}`);
+        const response = await axios.get(`https://hotelback-haac.onrender.com/hotels/${id}`);
         setHotel(response.data);
         console.log(response.data);
       } catch (error) {
