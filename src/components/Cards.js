@@ -62,13 +62,13 @@ function Cards() {
         <h1 className="mb-12 text-center font-sans sm:text-5xl font-bold text-gray-900 text-xl">
           Accommodations<span className="text-blue-600">.</span>
         </h1>
-        <div className="mb-8 flex justify-center gap-4">
+        <div className="mb-8 flex flex-col justify-center gap-4 md:flex-row p-3">
           <input
             type="text"
             placeholder="Search by name or location"
             value={searchTerm}
             onChange={handleSearch}
-            className="p-2 border rounded-lg w-full max-w-xs shadow-sm focus:outline-none "
+            className="p-2 border rounded-lg md:w-64  w-full   shadow-sm focus:outline-none "
           />
           <select
             value={sortOption}
