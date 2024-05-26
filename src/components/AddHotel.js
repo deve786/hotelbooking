@@ -15,7 +15,7 @@ const AddHotel = () => {
 
     const fetchHotels = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/hotels');
+            const response = await axios.get('https://hotelback-haac.onrender.com/hotels');
             setHotels(response.data);
         } catch (error) {
             console.error('Error fetching hotels:', error);
@@ -25,14 +25,14 @@ const AddHotel = () => {
     const handleSaveHotel = async (hotel) => {
         if (hotelToEdit) {
             try {
-                await axios.put(`http://localhost:5000/hotels/${hotel.id}`, hotel);
+                await axios.put(`https://hotelback-haac.onrender.com/hotels/${hotel.id}`, hotel);
                 setHotels(hotels.map(h => h.id === hotel.id ? hotel : h));
             } catch (error) {
                 console.error('Error updating hotel:', error);
             }
         } else {
             try {
-                const response = await axios.post('http://localhost:5000/hotels', hotel);
+                const response = await axios.post('https://hotelback-haac.onrender.com/hotels', hotel);
                 setHotels([...hotels, response.data]);
             } catch (error) {
                 console.error('Error adding hotel:', error);
@@ -48,7 +48,7 @@ const AddHotel = () => {
 
     const handleDeleteHotel = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/hotels/${id}`);
+            await axios.delete(`https://hotelback-haac.onrender.com/hotels/${id}`);
             setHotels(hotels.filter(hotel => hotel.id !== id));
             toast.success('Delete Sucessfully..!', {
                 position: "bottom-right",

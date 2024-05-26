@@ -11,7 +11,7 @@ const BookedDetails = () => {
     useEffect(() => {
         const fetchBookingDetails = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/bookings');
+                const response = await axios.get('https://hotelback-haac.onrender.com/bookings');
                 setBookingDetails(response.data);
                 console.log(response.data);
             } catch (error) {
@@ -65,7 +65,7 @@ const BookedDetails = () => {
                 <p className='flex justify-center items-center h-52 text-2xl'>No Bookings</p>
             )}
 
-            {/* Pagination Controls */}
+           
             <div className="flex justify-between items-center mt-4">
                 <button
                     onClick={handlePrevPage}

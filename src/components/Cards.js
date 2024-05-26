@@ -10,7 +10,7 @@ function Cards() {
 
   const fetchHotels = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/hotels');
+      const response = await axios.get('https://hotelback-haac.onrender.com/hotels');
       setHotels(response.data);
     } catch (error) {
       console.error('Error fetching hotels:', error);

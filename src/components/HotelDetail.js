@@ -13,7 +13,7 @@ const HotelDetails = () => {
   useEffect(() => {
     const fetchHotel = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/hotels/${id}`);
+        const response = await axios.get(`https://hotelback-haac.onrender.com/${id}`);
         setHotel(response.data);
         console.log(response.data);
       } catch (error) {
@@ -26,7 +26,7 @@ const HotelDetails = () => {
   
   const handleBookNow = async () => {
     try {
-      await axios.post('http://localhost:5000/bookings', {
+      await axios.post('https://hotelback-haac.onrender.com/bookings', {
         hotelId: hotel.id,
         hotelName: hotel.name,
         bookingDate: selectedDate,
